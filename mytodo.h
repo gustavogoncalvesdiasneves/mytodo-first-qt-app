@@ -1,8 +1,8 @@
 #ifndef MYTODO_H
 #define MYTODO_H
 
-#include <QMainWindow>
 #include <QMessageBox>
+#include <QMainWindow>
 #include <QtSql>
 #include <QFileInfo>
 #include <QDebug>
@@ -18,10 +18,10 @@ class MyTodo : public QMainWindow
 
 public:
     MyTodo(QWidget *parent = nullptr);
-    QString path = "C:/Users/mfaria/OneDrive/logica/study-teste/cpp-studies/MyTodo";
-    void start();
-    QString data = ":/data/mytodo.db";
-    QString user = path + "/.config/mytodo.db";
+    //QString path = getenv("HOME"); // Uso especifico para sistemas Unix
+    //void start();
+    QString dir = qApp->applicationDirPath();
+    QString user = dir + "/mytodo.db";
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     void show_data();
@@ -31,6 +31,8 @@ private slots:
     void on_actionSair_triggered();
 
     void on_actionSobre_triggered();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MyTodo *ui;

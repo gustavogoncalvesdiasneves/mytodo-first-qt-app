@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>img/about.png</file>
-        <file>img/background.png</file>
-        <file>img/close.png</file>
-        <file>data/mytodo.db</file>
-    </qresource>
-</RCC>

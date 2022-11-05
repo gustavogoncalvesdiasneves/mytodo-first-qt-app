@@ -41,7 +41,7 @@ MyTodo::~MyTodo()
 void MyTodo::show_data()
 {
     QSqlQuery query;
-    QString sql = "SELECT * FROM todos";
+    QString sql = "SELECT * FROM todos ORDER BY id DESC";
     query.prepare(sql);
 
     if(query.exec())
@@ -69,6 +69,7 @@ void MyTodo::show_data()
         ui->tableWidget->setColumnWidth(2, 120);
 
 
+        // Limpar as linhas sempre que atualizar a tabela
         while (i < ui->tableWidget->rowCount())
         {
             ui->tableWidget->removeRow(i);
@@ -96,7 +97,7 @@ void MyTodo::on_actionSobre_triggered()
                        "Sobre esse projeto",
                        "<h2>MyTodo 1.0.0</h2>"
                        "<p>Desenvolvido por Marcus Faria<br/>"
-                       "<i>Copyright 2022 mfaria-tech<i/></p>"
+                       "<i>Copyright (c) 2022 mfaria-tech<i/></p>"
                        "<p>Primeira aplicação versionada em C++.<br/>"
                        "Projeto desenvolvido com o intuito de aplicar<br/>"
                        "os conhecimentos aprendidos durante<br/>"
@@ -143,7 +144,20 @@ void MyTodo::on_pushButton_clicked()
     }
     else
     {
-        qDebug() << "Falha ao inserir dados";
+        qDebug() << "Falha ao inserir dados: " + sql;
     }
+}
+
+
+void MyTodo::on_tableWidget_cellClicked(int row, int column)
+{
+    column = 0;
+    int id = ui->tableWidget->item(row, column)->text().toInt();
+    QString todo = ui->tableWidget->item(row, 1)->text();
+
+    Editar e(this, id, todo);
+    e.exec();
+
+    show_data();
 }
 

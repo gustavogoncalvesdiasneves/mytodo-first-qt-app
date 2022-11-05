@@ -6,6 +6,7 @@
 #include <QtSql>
 #include <QFileInfo>
 #include <QDebug>
+#include "editar.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -33,6 +34,8 @@ private slots:
     void on_actionSobre_triggered();
 
     void on_pushButton_clicked();
+
+    void on_tableWidget_cellClicked(int row, int column);
 
 private:
     Ui::MyTodo *ui;

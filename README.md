@@ -26,26 +26,38 @@
 
 <br/><hr/>
 
-## Índice
+<h2>Índice</h2>
 
 - **[Descrição](#descrição)**<br/>
-- **[Código](#código)**<br/>
+- **[Características](#características)**<br/>
 - **[Instalação](#instalação)**<br/>
-    - [Executável](#executável)<br/>
-    - [Pasta Compactada](#pasta-compactada)<br/>
 
 
 <br/><hr/>
 
-<!-- ## Descrição
 
-## Código
+## Descrição
+[mytodo-first-qt-app][link-mytodo-first-qt-app] é um aplicativo de código aberto. Ele irá ajudar na tomada de descisões e definição de prioridades. A aplicação armazena localmente as **tasks** criadas pelo usuário, gravando a hora e data do **registro** de sua última alteração.
+
+<br/><br/>
+
+
+## Características
+A aplicação fornece os seguintes recursos:
+- Operações CRUD
+- Armazenamento de dados em base local
+- Biblioteca SQLite
+- Código-fonte C++ e Qmake
+- Binário disponível para download
+- Instalador Windows
+
+<br/><br/>
+
 
 ## Instalação
+Além de disponibilizado o [código fonte][link-codigo-fonte], tambem é possível baixar a aplicação através do instalador, ou baixar a pasta compactada contendo os binários, ambos disponíveis [neste repositório][link-mytodo-executavel].
 
-### Executável
-
-### Pasta Compactada -->
+Para ambos os métodos de "instalação" da aplicação está sendo disponibilizado um arquivo de validação de integridade dos binários, [clique aqui para acessar o arquivo de checksum][link-checksum].
 
 
 
@@ -54,3 +66,7 @@
     LOCAL VARIABLES
  -->
 
+[link-mytodo-first-qt-app]: https://github.com/mfaria-tech/mytodo-first-qt-app
+[link-mytodo-executavel]: https://github.com/mfaria-tech/mytodo-first-qt-app/tree/main/v1.0.0
+[link-codigo-fonte]: https://github.com/mfaria-tech/mytodo-first-qt-app/tree/main/src
+[link-checksum]: https://github.com/mfaria-tech/mytodo-first-qt-app/blob/main/v1.0.0/checksum.sha256sum

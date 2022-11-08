@@ -31,6 +31,7 @@
 - **[Descrição](#descrição)**<br/>
 - **[Características](#características)**<br/>
 - **[Instalação](#instalação)**<br/>
+- **[Compilar o Código-Fonte](#compilar-o-código-fonte)**<br/>
 
 
 <hr/>
@@ -61,6 +62,56 @@ Além de disponibilizado o [código fonte][link-codigo-fonte], tambem é possív
 Para ambos os métodos de "instalação" da aplicação está sendo disponibilizado um arquivo de validação de integridade dos binários, [clique aqui para acessar o arquivo de checksum][link-checksum].
 
 
+## Compilar o Código-Fonte
+
+Para compilar o projeto C++ e as bibliotecas pertencente ao QT, é preciso instalar o ambiente QT Creator no sistema operacional. Para fins de curiosidade, [clique aqui para acessar a documentação oficial da plataforma.][link-doc-qt]
+
+<br/>
+
+### Compilar o projeto
+
+Tendo o ambiente configurado, é possível compilar o projeto de duas formas:
+ 1. Abrindo o projeto direto no ambiente, e executando o código-fonte dentro do ambiente (_recomendado_);
+ 2. Executando o compilador através de comandos no terminal.
+
+<br/>
+
+#### Compilando o projeto no terminal
+
+1. Acesse o diretório do projeto no terminal, ou prompt de comando;
+    ~~~Bash
+    cd mytodo-first-qt-app/src
+    ~~~
+
+2. Execute os seguintes comandos de compilação do projeto (é preciso estar atualizado na versão C++ 17):
+
+    ~~~Bash
+    # Gerar o arquivo contendo as diretivas para o Makefile
+    #   arquivos gerado: 
+    #       .qmake.stash
+    #       Makefile
+    qmake 
+    
+
+    # Criar o executável atraves do Makefile
+    #
+    # No sistema Windows, caso esteja utilizando o MinGW 32,
+    # utilize o comando:
+    #       mingw32-make
+    make
+
+
+    # No final da execução do comando 'make', serão criados
+    # dois diretórios no caminho atual:
+    #       debug/
+    #       release/
+    #
+    # A depender de como foi configurado o ambiente, o executável
+    # poderá ser encontrado em um destes diretórios.
+    ~~~
+
+
+<br/><br/>
 
 
 <!-- 
@@ -71,3 +122,4 @@ Para ambos os métodos de "instalação" da aplicação está sendo disponibiliz
 [link-mytodo-executavel]: https://github.com/mfaria-tech/mytodo-first-qt-app/tree/main/v1.0.0
 [link-codigo-fonte]: https://github.com/mfaria-tech/mytodo-first-qt-app/tree/main/src
 [link-checksum]: https://github.com/mfaria-tech/mytodo-first-qt-app/blob/main/v1.0.0/checksum.sha256sum
+[link-doc-qt]: https://doc.qt.io/qt-6/get-and-install-qt.html

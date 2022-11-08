@@ -38,13 +38,13 @@
 <br/><br/>
 
 
-## Descrição
+## **Descrição**
 [mytodo-first-qt-app][link-mytodo-first-qt-app] é um aplicativo de código aberto. Ele irá ajudar na tomada de descisões e definição de prioridades. A aplicação armazena localmente as **tasks** criadas pelo usuário, gravando a hora e data do **registro** de sua última alteração.
 
 <br/><br/>
 
 
-## Características
+## **Características**
 A aplicação fornece os seguintes recursos:
 - Operações CRUD
 - Armazenamento de dados em base local
@@ -56,19 +56,22 @@ A aplicação fornece os seguintes recursos:
 <br/><br/>
 
 
-## Instalação
+## **Instalação**
 Além de disponibilizado o [código fonte][link-codigo-fonte], tambem é possível baixar a aplicação através do instalador, ou baixar a pasta compactada contendo os binários, ambos disponíveis [neste repositório][link-mytodo-executavel].
 
 Para ambos os métodos de "instalação" da aplicação está sendo disponibilizado um arquivo de validação de integridade dos binários, [clique aqui para acessar o arquivo de checksum][link-checksum].
 
+<br/><br/>
 
-## Compilar o Código-Fonte
+
+## **Compilar o Código-Fonte**
 
 Para compilar o projeto C++ e as bibliotecas pertencente ao QT, é preciso instalar o ambiente QT Creator no sistema operacional. Para fins de curiosidade, [clique aqui para acessar a documentação oficial da plataforma.][link-doc-qt]
 
 <br/>
 
-### Compilar o projeto
+
+### **Compilar o projeto**
 
 Tendo o ambiente configurado, é possível compilar o projeto de duas formas:
  1. Abrindo o projeto direto no ambiente, e executando o código-fonte dentro do ambiente (_recomendado_);
@@ -76,7 +79,7 @@ Tendo o ambiente configurado, é possível compilar o projeto de duas formas:
 
 <br/>
 
-#### Compilando o projeto no terminal
+#### **Compilando o projeto no terminal**
 
 1. Acesse o diretório do projeto no terminal, ou prompt de comando;
     ~~~Bash
@@ -99,16 +102,15 @@ Tendo o ambiente configurado, é possível compilar o projeto de duas formas:
     # utilize o comando:
     #       mingw32-make
     make
-
-
-    # No final da execução do comando 'make', serão criados
-    # dois diretórios no caminho atual:
-    #       debug/
-    #       release/
-    #
-    # A depender de como foi configurado o ambiente, o executável
-    # poderá ser encontrado em um destes diretórios.
     ~~~
+    No final da execução do comando `make`, serão criados dois diretórios no caminho atual:
+
+     - `debug/`
+     - `release/`
+    
+    <br/>
+
+    A depender de como foi configurado o ambiente, o executável poderá ser encontrado em um destes diretórios.
 
 
 <br/><br/>
